@@ -27,3 +27,39 @@
 		})(navbars[i]);
 	}
 })();
+
+
+// Transition to different parts of page
+$(".contact_button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#contact").offset().top
+    }, 1500);
+    $('.menu li').removeClass('selected');
+    $(this).children().addClass('selected');
+    var windowSize = $(window).width();
+    if (windowSize <= 540) {
+        $('.hamburger-menu').toggle();
+    }
+});
+
+$(".about_button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#about").offset().top-110
+    }, 1500);
+    $('.menu li').removeClass('selected');
+    $(this).children().addClass('selected');
+    var windowSize = $(window).width();
+    
+});
+
+$(".project_button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#portfolio").offset().top
+    }, 1500);
+    $('.menu li').removeClass('selected');
+	$(this).children().addClass('selected');
+});
+
+   
+ 
+

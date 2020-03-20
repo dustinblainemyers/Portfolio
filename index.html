@@ -6,20 +6,11 @@
 
 	<title>Dustin Myers | Portfolio </title>
 
-
-
-	
-	
-	
-	
-	
-
-	
-
 	<link rel="stylesheet" href="/css/main.css" type="text/css">
 	
 </head>
 <body>
+	
 	<div class="container">
 		<a href="/" class="plain">
 			<div class="banner"><span class="brand-color">C</span>reative <span class="brand-color">T</span>ech <span class="brand-color">G</span>uy</div>
@@ -29,14 +20,15 @@
 			<button class="navbar-expand">Navigation <span class="navbar-expand-arrow">▼</span></button>
 			<ul class="nav-list">
 				<li class="nav-item"><a href="/">Home</a></li>
-				<li class="nav-item"><a href="/about-me.html">About Me</a></li>
-				<li class="nav-item"><a href="/projects.html">Projects</a></li>
+				<li class="nav-item"><a href="#about" class="about_button">About Me</a></li>
+				<li class="nav-item"><a href="#portfolio" class="portfolio_button">Projects</a></li>
 				<li class="nav-item"><a href="/skills.html">Skills</a></li>
 				<li class="nav-item"><a href="/resume.html">Resume</a></li>
 				<li class="nav-item"><a href="/contact.html">Contact</a></li>
 				
 			</ul>
 		</nav>
+		<div class="about" id="about">
 		<div class="row">
 			<div class="item-quarter-3">
 				<div class="item-contents">
@@ -49,152 +41,56 @@
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, sint, quod accusantium consequatur temporibus eaque aut, odit repellendus rerum dolorem reprehenderit mollitia corporis! Voluptatem natus quidem perferendis voluptas quam sed.
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum mollitia, itaque recusandae quos impedit rem maiores illo voluptates animi sapiente consequatur quam eius quas odit sit incidunt accusantium! Possimus, ut.
 						
+					</div>	
+						
+	<div class="portfolio" id="portfolio">
+	<div class="container">
+		
+		
+	
+	
+	
+	<div class="row row-left">
+		<div class="item-half" id="sidelined">
+			<div class="item-contents">
+				<a href="#">
+					<img src="#" class="img-fluid game-image hover-zoom" alt="Sidelined Screenshot">
+				</a>
+				<div class="item-body-text">
+					<h2 class="project-title">Sidelined</h2>
+					<h6 class="award-line">IEEE-GameSig 2016 Finalist</h6>
+					<p>
+						This was been my most ambitious and best game to date. I was looking for a role playing game to play and I realized that very few games had anything besides combat. So I set out to make a game that didn't have any combat at all. Sidelined is a strategy game where your goal is to collect and research all 21 items that are available in your world. It is a simple game for anyone to learn how to play. Once you beat the game, your adventure is not over. You need to learn from your mistakes to try to complete the mission faster the next time to beat your score.
 					</p>
 					<p>
-						Thank you for your feedback.<br>
-						<em>Jason O'Neill</em>
+						<a href="/downloads/Sidelined%20Installer.exe">DOWNLOAD</a> (Version 1.1)
+						<br>First released: April 2016
 					</p>
 				</div>
 			</div>
-			<div class="item-quarter-1 item-max-quarter-1">
+		</div>
+
+		
+			<div class="item-half" id="sidelined">
 				<div class="item-contents">
-					<img src="/images/jason%20oneill.png" class="img-fluid brand-color" style="border: 2px solid;" alt="Jason O'Neill Photo">
-				</div>
-			</div>
-		</div>
-		<h3 class="text-center" id="formSubmitOutput">&nbsp;</h3>
-		<div class="spinner" style="display: none;" id="formSubmissionSpinner"></div>
-		<div class="row">
-			<div class="item-quarter-1"></div>
-			<form class="item-quarter-2">
-				<input type="hidden" name="uuid" value="SGVsbG8gQ3VyaW91cyBJbmRpdmlkdWFs">
-				<table style="width: 100%">
-					<tr>
-						<td>
-							<strong>Name:</strong>
-						</td>
-						<td>
-							<input type="text" name="name" autocomplete="name" maxlength="50" required>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<strong>Email Address:</strong>
-						</td>
-						<td>
-							<input type="email" name="email" autocomplete="email" maxlength="100" required>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<strong>Message:</strong>
-						</td>
-						<td>
-							<textarea name="message" style="min-height: 80px; height:80px;" maxlength="1000" required></textarea>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2" class="text-center">
-							<input type="submit" value="Submit">
-						</td>
-					</tr>
-				</table>
-			</form>
-			<div class="item-quarter-1"></div>
-			<script>
-				(function() {
-					document.querySelector("form").addEventListener("submit", function(e) {
-						e.preventDefault();
-						var inputs = this.querySelectorAll("[name]");
-						var queryData = {};
-						for (var i = 0; i < inputs.length; i++) {
-							queryData[inputs[i].name] = inputs[i].value;
-							if (inputs[i].value === "") {
-								formOutput("Error: You are missing your " + inputs[i].name + ".");
-								return;
-							}
-						}
-						var submitButton = this.querySelector("input[type='submit']");
-						submitButton.disabled = true;
-						submitButton.value = "Submitting...";
-						showSpinner();
-						http("POST", "https://api.creativetechguy.com/contact", queryData, function(success, response) {
-							if (success) {
-								formOutput("Your message was sent!");
-								for (var i = 0; i < inputs.length; i++) {
-									inputs[i].value = "";
-								}
-							} else {
-								formOutput("Something went wrong. Try again later.");
-							}
-							hideSpinner();
-							submitButton.value = "Submit";
-							submitButton.disabled = false;
-							document.querySelector("input[name='uuid']").value = window.btoa(Date.now());
-						});
-					});
-					document.querySelector("input[name='uuid']").value = window.btoa(Date.now());
-
-					function formOutput(text) {
-						document.getElementById("formSubmitOutput").innerText = text;
-						setTimeout(function() {
-							document.getElementById("formSubmitOutput").innerHTML = "&nbsp;";
-						}, 10000);
-					}
-
-					var spinnerTimeout;
-
-					function showSpinner() {
-						if (spinnerTimeout) {
-							clearTimeout(spinnerTimeout);
-						}
-						spinnerTimeout = setTimeout(function() {
-							document.getElementById("formSubmissionSpinner").style.display = "";
-						}, 250);
-					}
-
-					function hideSpinner() {
-						if (spinnerTimeout) {
-							clearTimeout(spinnerTimeout);
-						}
-						document.getElementById("formSubmissionSpinner").style.display = "none";
-					}
-
-					function http(method, url, data, callback) {
-						var xhttp = new XMLHttpRequest();
-						xhttp.onreadystatechange = function() {
-							if (this.readyState === 4) {
-								if (this.status === 200) {
-									callback(true, this.responseText);
-								} else {
-									callback(false, this.responseText);
-								}
-							}
-						}
-						xhttp.open(method, url, true);
-						xhttp.setRequestHeader("Content-Type", "application/json");
-						xhttp.withCredentials = true;
-						xhttp.send(JSON.stringify(data));
-					}
-				})();
-			</script>
-		</div>
-		<hr>
-		<footer class="text-center">
-			<p>
-				Copyright <span id="copyrightYear"></span> Jason O'Neill<br>
-				<br>
-				I don't charge anything for the games and tools on my website. If you would like to donate, you can do so using the PayPal link below.<br>
-				<a href="https://paypal.me/CreativeTechGuy" target="_blank" rel="noopener"><img src="/images/paypal.png" alt="PayPal Logo" style="height: 30px;"></a>
-			</p>
-			<script>
-				document.getElementById("copyrightYear").innerText = new Date().getFullYear();
-			</script>
-		</footer>
-	</div>
-	<script src="/global/js/main.js?v=1577077606690"></script>
-</body>
-</html>
+					<a href="#">
+						<img src="#" class="img-fluid game-image hover-zoom" alt="Sidelined Screenshot">
+					</a>
+					<div class="item-body-text">
+						<h2 class="project-title">Sidelined</h2>
+						<h6 class="award-line">IEEE-GameSig 2016 Finalist</h6>
+						<p>
+							This was been my most ambitious and best game to date. I was looking for a role playing game to play and I realized that very few games had anything besides combat. So I set out to make a game that didn't have any combat at all. Sidelined is a strategy game where your goal is to collect and research all 21 items that are available in your world. It is a simple game for anyone to learn how to play. Once you beat the game, your adventure is not over. You need to learn from your mistakes to try to complete the mission faster the next time to beat your score.
+						</p>
+						<p>
+							<a href="/downloads/Sidelined%20Installer.exe">DOWNLOAD</a> (Version 1.1)
+							<br>First released: April 2016
+						</p>
+					</div>
+				
+			
+		</div>	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="/js/main.js"></script>
 </body>
 </html>
