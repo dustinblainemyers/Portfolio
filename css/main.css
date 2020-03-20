@@ -12,7 +12,7 @@ body {
 	font-size: 16px;
 	letter-spacing: 0.05em;
 	line-height: 1.5;
-	background-color: #f3f3f3;
+	background-color: #14d3e1;
 	text-align: left;
 }
 
@@ -326,14 +326,14 @@ h6 {
 	font-weight: bold;
 	font-family: "Varela Round", sans-serif;
 	line-height: 1;
-	background: linear-gradient(90deg, #e8ffff, #60ceba, #e8ffff);
+	background: linear-gradient(90deg, #c7d01f, #31aa09, #e82706);
 	border: 1px solid transparent;
 	box-sizing: border-box;
 }
 
 .banner:hover {
 	border: 1px solid black;
-	color: #135cff;
+	color: #ddf009;
 }
 
 .banner:hover .brand-color {
