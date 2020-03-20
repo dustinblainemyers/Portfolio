@@ -354,7 +354,17 @@ h6 {
 .img-fluid {
 	max-width: 100%;
 	height: auto;
+	
 }
+
+.img-fluid-profile {
+	max-width: 100%;
+	height: auto;
+	border-radius: 50%;
+	max-width: 30%;
+		
+		
+	  }
 
 .hover-zoom {
 	transition: all 0.25s ease-in-out;
