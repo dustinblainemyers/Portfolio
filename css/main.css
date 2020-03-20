@@ -236,13 +236,27 @@ h6 {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	
 }
 
 .skill {
-	display:inline;
+	
 	flex: 1 0 auto;
-
+	flex-basis: 100px;
+	width: 30px;
+	min-width: 100px;
+	max-width: 100px;
+	margin: 1rem auto;
+	margin-right: 10px;
+	padding: 10px;
 }
+
+.skill > h2 {
+    white-space: nowrap;
+	overflow: hidden;
+	
+}
+
 
 @media screen and (max-width: 900px) {
 	.row > .item-quarter:not(.item-fixed),
