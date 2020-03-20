@@ -184,7 +184,7 @@ h6 {
 }
 
 .row > .item-quarter-3 {
-	flex-basis: 75%;
+	/* flex-basis: 75%; */
 }
 
 .row > .item-third,
