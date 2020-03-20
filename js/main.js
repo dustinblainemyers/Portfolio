@@ -36,15 +36,12 @@ $(".contact_button").click(function() {
     }, 1500);
     $('.menu li').removeClass('selected');
     $(this).children().addClass('selected');
-    var windowSize = $(window).width();
-    if (windowSize <= 540) {
-        $('.hamburger-menu').toggle();
-    }
+    
 });
 
 $(".about_button").click(function() {
     $('html, body').animate({
-        scrollTop: $("#about").offset().top-110
+        scrollTop: $("#about").offset().top-150
     }, 1500);
     $('.menu li').removeClass('selected');
     $(this).children().addClass('selected');
@@ -54,7 +51,16 @@ $(".about_button").click(function() {
 
 $(".project_button").click(function() {
     $('html, body').animate({
-        scrollTop: $("#portfolio").offset().top
+        scrollTop: $("#projects").offset().top-110
+    }, 1500);
+    $('.menu li').removeClass('selected');
+	$(this).children().addClass('selected');
+});
+
+
+$(".skills_button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#skills").offset().top-110
     }, 1500);
     $('.menu li').removeClass('selected');
 	$(this).children().addClass('selected');

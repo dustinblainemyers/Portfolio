@@ -204,6 +204,46 @@ h6 {
 	flex-basis: 100%;
 }
 
+
+[class*=" devicon-"], [class^=devicon-] {
+    font-family: devicon;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	
+}
+
+.cbp-ig-icon {
+    padding: 30px 0 0;
+    display: block;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -moz-transform 0.2s;
+	transition: transform 0.2s;
+	
+}
+
+/* .wrapper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+	flex-direction: column;
+} */
+.skill_container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.skill {
+	display:inline;
+	flex: 1 0 auto;
+
+}
+
 @media screen and (max-width: 900px) {
 	.row > .item-quarter:not(.item-fixed),
 	.row > .item-quarter-1:not(.item-fixed) {
