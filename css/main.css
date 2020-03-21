@@ -254,6 +254,30 @@ h6 {
 	
 }
 
+.myButton {
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	
+	background-color:blue;
+	border-radius:10px;
+	border:1px solid blue;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:blue;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
 
 
 @media screen and (max-width: 900px) {
@@ -617,9 +641,12 @@ nav > .navbar-expand {
 
 /* Footer */
 
-footer {
+footer  {
 	font-size: 0.75rem;
 	margin-bottom: 4rem;
+	margin-top:100px;
+	font-size: 16px;
+
 }
 
 /* Misc */
