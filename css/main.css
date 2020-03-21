@@ -304,8 +304,8 @@ h6 {
 		flex: 1 0 auto;
 		flex-basis: 100px;
 		
-		min-width: 150px;
-		max-width: 150px;
+		min-width: 125px;
+		max-width: 125px;
 		margin: 1rem auto;
 		margin-right: 10px;
 		padding: 10px;
@@ -314,6 +314,7 @@ h6 {
 	.skill > h2 {
 		white-space: nowrap;
 		word-wrap:break-word;
+		font-size:16px;
 		
 	}
 	
