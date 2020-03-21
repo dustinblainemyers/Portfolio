@@ -1,8 +1,9 @@
+
 (function() {
 	const navbars = document.getElementsByTagName("nav");
 	for (let i = 0; i < navbars.length; i++) {
 		(function(nav) {
-			let expanded = false;
+			var expanded = false;
 			const navList = nav.querySelector(".nav-list");
 			const naconstrow = nav.querySelector(".navbar-expand-arrow");
 			nav.querySelector(".navbar-expand").onclick = function() {
@@ -40,18 +41,30 @@ $(".contact_button").click(function() {
 });
 
 $(".about_button").click(function() {
+	let scrollAdjust = 150;
+	
+	if (document.documentElement.clientWidth <  601) {
+		console.log(document.documentElement.clientWidth)
+		scrollAdjust = 190;
+	}
     $('html, body').animate({
-        scrollTop: $("#about").offset().top-150
+        scrollTop: $("#about").offset().top-scrollAdjust
     }, 1500);
     $('.menu li').removeClass('selected');
     $(this).children().addClass('selected');
-    var windowSize = $(window).width();
+    
     
 });
 
 $(".project_button").click(function() {
+	let scrollAdjust = 150;
+	
+	if (document.documentElement.clientWidth <  601) {
+		console.log(document.documentElement.clientWidth)
+		scrollAdjust = 220;
+	}
     $('html, body').animate({
-        scrollTop: $("#projects").offset().top-110
+        scrollTop: $("#projects").offset().top-scrollAdjust
     }, 1500);
     $('.menu li').removeClass('selected');
 	$(this).children().addClass('selected');
@@ -59,8 +72,14 @@ $(".project_button").click(function() {
 
 
 $(".skills_button").click(function() {
+	let scrollAdjust = 150;
+	
+	if (document.documentElement.clientWidth <  601) {
+		console.log(document.documentElement.clientWidth)
+		scrollAdjust = 190;
+	}
     $('html, body').animate({
-        scrollTop: $("#skills").offset().top-110
+        scrollTop: $("#skills").offset().top-scrollAdjust
     }, 1500);
     $('.menu li').removeClass('selected');
 	$(this).children().addClass('selected');
