@@ -15,6 +15,7 @@
 						navList.style.height = height + "px";
 					}, 0);
 					naconstrow.innerText = "▲";
+					
 				} else {
 					navList.style.height = "0px";
 					naconstrow.innerText = "▼";

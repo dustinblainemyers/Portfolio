@@ -353,7 +353,7 @@ h6 {
 	
 }
 
-@media screen and (max-width: 355px) {
+@media screen and (max-width: 450px) {
 	.skill_container {
 		display: flex;
 		flex-direction: row;
