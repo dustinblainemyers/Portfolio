@@ -696,3 +696,8 @@ footer  {
 		transform: rotate(360deg);
 	}
 }
+
+svg:hover  {
+
+	background-color:blue;
+}
